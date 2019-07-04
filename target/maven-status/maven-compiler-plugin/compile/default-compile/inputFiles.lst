@@ -1,0 +1,7 @@
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\exceptions\NonexistentEntityException.java
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\exceptions\RollbackFailureException.java
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\exceptions\IllegalOrphanException.java
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\com\mycompany\Entities\Persona.java
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\TestConnection\TestConnectionDB.java
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\exceptions\PreexistingEntityException.java
+C:\Users\pc030\Documents\NetBeansProjects\ServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\PersonaJpaController.java
