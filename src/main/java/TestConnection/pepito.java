@@ -12,9 +12,15 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * @author pc030
  */
 public class pepito {
+    @JsonProperty("id")
+    public int id;
     @JsonProperty("Nombre")
     public String nombre;
     @JsonProperty("Apellido")
     public String apellido;
+
+    public int id() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
