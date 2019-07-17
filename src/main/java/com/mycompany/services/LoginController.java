@@ -41,7 +41,7 @@ public class LoginController {
     public LoginController() {
     }
 
-     @Path("Estructura")
+    @Path("Estructura")
     @GET
     @Produces(MediaType.APPLICATION_JSON)    
     public Login getJson() {
