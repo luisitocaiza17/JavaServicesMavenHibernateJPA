@@ -16,11 +16,18 @@ import javax.persistence.Persistence;
  */
 public class PersonaLogic {
     public static Persona ConsultarPersona(int id){
+        try{
         EntityManagerFactory emf =Persistence.createEntityManagerFactory("mavendbConnection");
         EntityManager em= emf.createEntityManager();
-        Persona per= em.find(Persona.class, id);
+        Persona per= em.find(Persona.class, 2);
         System.out.println(per);
+        System.out.println(per.getNombres());
+        System.out.println("Test Finalizado");
         em.close();
         return per;
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
 }

@@ -15,7 +15,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.transaction.UserTransaction;
 
@@ -25,6 +30,9 @@ import javax.transaction.UserTransaction;
  */
 public class PersonaJpaController implements Serializable {
 
+    public PersonaJpaController() {
+    }
+
     public PersonaJpaController(UserTransaction utx, EntityManagerFactory emf) {
         this.utx = utx;
         this.emf = emf;
@@ -33,7 +41,9 @@ public class PersonaJpaController implements Serializable {
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
-        return emf.createEntityManager();
+        EntityManagerFactory emf =Persistence.createEntityManagerFactory("mavendbConnection");
+        EntityManager em= emf.createEntityManager();
+        return em;
     }
 
     public void create(Persona persona) throws PreexistingEntityException, RollbackFailureException, Exception {
@@ -160,6 +170,31 @@ public class PersonaJpaController implements Serializable {
         } finally {
             em.close();
         }
+    }
+    
+    public  Persona findByNameUser(String name,String apellidos) {
+        EntityManager em = getEntityManager();
+        CriteriaBuilder builder = em.getCriteriaBuilder();
+        CriteriaQuery<Persona> criteria = builder.createQuery(Persona.class);
+        Root<Persona> from = criteria.from(Persona.class);
+        criteria.select(from);
+        //criteria.where(builder.equal(from.get("nombres"), name));
+        
+        Predicate conditionalName = builder.equal(from.get("nombres"), name);
+        Predicate conditionalApellidos = builder.equal(from.get("apellidos"), apellidos);
+        Predicate conditionalAnd = builder.and(conditionalName, conditionalApellidos);                
+        criteria.where(conditionalAnd);
+        
+        TypedQuery<Persona> typed = em.createQuery(criteria);
+        try {
+            return typed.getSingleResult();
+        } catch (final NoResultException nre) {
+            return null;
+        }
+        finally {
+            em.close();
+        }
+        
     }
     
 }

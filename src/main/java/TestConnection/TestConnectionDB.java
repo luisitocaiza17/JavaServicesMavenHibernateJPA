@@ -20,6 +20,8 @@ public class TestConnectionDB {
         EntityManager em= emf.createEntityManager();
         Persona per= em.find(Persona.class, 2);
         System.out.println(per);
+        System.out.println(per.getNombres());
+        System.out.println("Test Finalizado");
         em.close();
     }
 }
