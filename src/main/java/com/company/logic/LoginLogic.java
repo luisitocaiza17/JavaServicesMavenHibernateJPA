@@ -18,12 +18,10 @@ public class LoginLogic {
         //verifico la existencia en la base de datos    
         PersonaJpaController perDB= new PersonaJpaController();
         Persona per=perDB.findByNameUser(user.getNombre(),user.getPassword());
-        System.out.println(per);
         if(per!=null){
             user.setPersona(per);
             user.setEsCorrecto(true);
-        }
-           
+        }           
         return user;
     }
 }

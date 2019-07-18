@@ -8,7 +8,9 @@ package com.mycompany.services;
 import TestConnection.pepito;
 import com.company.logic.LoginLogic;
 import com.company.logic.PersonaLogic;
+import com.company.logic.ResponseLogic;
 import com.company.logic.pojos.Login;
+import com.company.logic.pojos.Msg;
 import com.mycompany.Entities.Persona;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -66,8 +68,8 @@ public class LoginController {
                   return Response.status(Response.Status.UNAUTHORIZED).entity("Acceso no Autorizado").build();
           
             Login loginValidate= LoginLogic.validateUser(login);
-            
-            return Response.ok(loginValidate, MediaType.APPLICATION_JSON).build();
+            Msg response=ResponseLogic.response_OK(loginValidate, "Correcto");
+            return Response.ok(response, MediaType.APPLICATION_JSON).build();
         }catch(Exception e){            
             return Response.status(Response.Status.NOT_FOUND).entity("No se encontro el servicio").build();
         }
