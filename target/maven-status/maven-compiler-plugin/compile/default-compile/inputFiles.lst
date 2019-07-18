@@ -5,11 +5,14 @@ D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\jav
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\exceptions\IllegalOrphanException.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\services\ApplicationConfig.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\services\PersonasController.java
+D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\company\logic\ResponseLogic.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\TestConnection\TestConnectionDB.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\TestConnection\pepito.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\exceptions\RollbackFailureException.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\dao\PersonaJpaController.java
+D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\company\logic\enums\ResponseEnum.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\company\logic\PersonaLogic.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\company\logic\pojos\Login.java
+D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\company\logic\pojos\Msg.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\Entities\Persona.java
 D:\Programacion\Java\ServiciosWebJava\JavaServicesMavenHibernateJPA\src\main\java\com\mycompany\services\LoginController.java
